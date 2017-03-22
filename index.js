@@ -1,12 +1,12 @@
 
 
+const http = require('http');
+const PORT = 7000;
+const App = require('./app');
+const server = new App();
 
-var another = require('./test');
-// console.log(another);
+http.createServer(server.initServer()).listen(PORT,()=>{
+	console.log(`server listening on port ${PORT}`)
+})
 
-var padkage = require('./package');
-console.log(padkage);
-
-
-// var test = require('lodash');
-// console.log(test);
+// console.log(http);
